@@ -109,7 +109,8 @@ const Toast = ({ message, type, onClose }) => {
 const HeroSection = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
   // Replace 'your-image.jpg' with your actual local image filename
-  const heroImage = "./src/assets/image.jpg"; // Adjust path based on your image location
+  const heroImage =
+    "https://res.cloudinary.com/dqwv3d9ec/image/upload/v1775766187/IMG_20260410_015120_nkfzx7.jpg"; // Adjust path based on your image location
 
   const handleSearch = (e) => {
     e.preventDefault();
