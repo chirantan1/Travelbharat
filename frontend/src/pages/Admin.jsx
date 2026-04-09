@@ -48,7 +48,9 @@ const Admin = () => {
 
   const fetchStates = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/states");
+      const res = await axios.get(
+        "https://travelbharat-lxbw.onrender.com/api/states",
+      );
       setStates(res.data);
     } catch (error) {
       console.error("Error fetching states", error);
@@ -71,7 +73,7 @@ const Admin = () => {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:8080/api/states/${editingId}`,
+          `https://travelbharat-lxbw.onrender.com/api/states/${editingId}`,
           formData,
         );
         setStatus({
@@ -80,7 +82,7 @@ const Admin = () => {
         });
       } else {
         const response = await axios.post(
-          "http://localhost:8080/api/states",
+          "https://travelbharat-lxbw.onrender.com/api/states",
           formData,
         );
         setStatus({
@@ -116,7 +118,9 @@ const Admin = () => {
 
     setDeletingId(id);
     try {
-      await axios.delete(`http://localhost:8080/api/states/${id}`);
+      await axios.delete(
+        `https://travelbharat-lxbw.onrender.com/api/states/${id}`,
+      );
       fetchStates();
       setStatus({
         type: "success",

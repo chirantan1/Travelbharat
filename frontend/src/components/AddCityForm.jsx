@@ -30,7 +30,9 @@ const AddCityForm = () => {
   useEffect(() => {
     const fetchStates = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/states");
+        const res = await axios.get(
+          "https://travelbharat-lxbw.onrender.com/api/states",
+        );
         setStates(res.data);
       } catch (error) {
         console.error("Failed to fetch states", error);
@@ -42,7 +44,9 @@ const AddCityForm = () => {
   // ✅ Fetch cities
   const fetchCities = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/cities");
+      const res = await axios.get(
+        "https://travelbharat-lxbw.onrender.com/api/cities",
+      );
       setCities(res.data);
     } catch (error) {
       console.error("Failed to fetch cities", error);
@@ -60,7 +64,7 @@ const AddCityForm = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      await axios.post("http://localhost:8080/api/cities", {
+      await axios.post("https://travelbharat-lxbw.onrender.com/api/cities", {
         name,
         state: stateId,
       });
@@ -92,7 +96,9 @@ const AddCityForm = () => {
   const handleDelete = async (id, cityName) => {
     setDeletingId(id);
     try {
-      await axios.delete(`http://localhost:8080/api/cities/${id}`);
+      await axios.delete(
+        `https://travelbharat-lxbw.onrender.com/api/cities/${id}`,
+      );
       fetchCities();
 
       setStatus({

@@ -17,7 +17,9 @@ const Destinations = () => {
   useEffect(() => {
     const fetchStates = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/states");
+        const res = await axios.get(
+          "https://travelbharat-lxbw.onrender.com/api/states",
+        );
         setStatesList(res.data);
       } catch (err) {
         console.error("Failed to fetch states for filter");
@@ -32,7 +34,7 @@ const Destinations = () => {
     setError(null);
     try {
       // Build the dynamic URL based on what the user typed/selected
-      let url = "http://localhost:8080/api/places?";
+      let url = "https://travelbharat-lxbw.onrender.com/api/places?";
 
       if (searchTerm) {
         url += `search=${searchTerm}&`;

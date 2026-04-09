@@ -13,7 +13,9 @@ const States = () => {
     const fetchStates = async () => {
       try {
         // Fetch data from your backend API
-        const response = await axios.get("http://localhost:8080/api/states");
+        const response = await axios.get(
+          "https://travelbharat-lxbw.onrender.com/api/states",
+        );
 
         // Update the state variable with the data we got back
         setStatesList(response.data);

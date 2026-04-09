@@ -16,7 +16,7 @@ const StateDetails = () => {
       try {
         // Remember that awesome query parameter filter we built in Phase 1? Here it is in action!
         const response = await axios.get(
-          `http://localhost:8080/api/places?stateId=${id}`,
+          `https://travelbharat-lxbw.onrender.com/api/places?stateId=${id}`,
         );
         setPlaces(response.data);
         setLoading(false);
