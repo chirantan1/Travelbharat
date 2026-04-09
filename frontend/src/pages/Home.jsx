@@ -109,7 +109,7 @@ const Toast = ({ message, type, onClose }) => {
 const HeroSection = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
   // Replace 'your-image.jpg' with your actual local image filename
-  const heroImage = "./public/image.jpg"; // Adjust path based on your image location
+  const heroImage = "./src/assets/image.jpg"; // Adjust path based on your image location
 
   const handleSearch = (e) => {
     e.preventDefault();
